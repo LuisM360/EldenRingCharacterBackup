@@ -7,5 +7,5 @@ Backup and Restore your Elden Ring Character Save
 
 ### Usage
 Once the program runs and opens. There will be two buttons Backup and Restore. Backup will ask you to choose where you
-want to save the files to. Restore will only work once you Backup. It will use the same folder that was selected from
-Backup and replace the original files with what you have backed up.
+want to save the files to. Restore will ask which folder you want to restore from. It will then replace the file in the
+original save folder with the files from the folder chosen.
