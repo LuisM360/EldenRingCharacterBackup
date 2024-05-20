@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QPushButton, QVBoxLayout, QWidget, QMessageBox
+from PySide6.QtWidgets import QMainWindow, QPushButton, QVBoxLayout, QWidget, QMessageBox, QFileDialog
 from util.file_operations import FileOperations
 
 
@@ -20,9 +20,14 @@ class MainWindow(QMainWindow):
 
         # Restore button
         btn_restore = QPushButton("Restore Files", self)
-        btn_restore.clicked.connect(self.file_ops.restore)
+        btn_restore.clicked.connect(self.restore_files)
         layout.addWidget(btn_restore)
 
         container = QWidget()
         container.setLayout(layout)
         self.setCentralWidget(container)
+
+    def restore_files(self):
+        directory = QFileDialog.getExistingDirectory(self, "Select Backup Directory")
+        if directory:
+            self.file_ops.restore(directory)

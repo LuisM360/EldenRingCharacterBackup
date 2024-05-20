@@ -24,11 +24,8 @@ class FileOperations:
             except Exception as e:
                 QMessageBox.critical(None, "Error", str(e))
 
-    def restore(self):
-        if not self.backup_directory:
-            QMessageBox.warning(None, "Warning", "No backup directory selected.")
-            return
-        source_path = self.backup_directory
+    def restore(self, backup_directory):
+        source_path = backup_directory
         destination_path = os.path.expanduser("~\\AppData\\Roaming\\EldenRing")
         try:
             for item in os.listdir(source_path):
