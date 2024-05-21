@@ -2,7 +2,7 @@
 Backup and Restore your Elden Ring Character Save
 
 ## Installation & Usage
-1. Download lastest Release
+1. Download lastest [Release](../../releases)
 2. Run Program
 
 ### Usage
